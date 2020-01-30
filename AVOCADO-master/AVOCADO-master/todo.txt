@@ -1,0 +1,62 @@
+Lane Keeping:
+    DONE:
+        clear out lane detection folder
+        move tmp.py to lane detection folder
+        set up named pipes
+        change named pipes from hardcoded to include
+        put forking functions into main.cpp
+    IN PROGRESS:
+        add filter to lane detection (exists on Jetson #2)
+    TODO:
+        Resolve index out of bounds error
+        Fix point drawing to come AFTER filter, not BEFORE!
+        Don't add filter when first finding. That means the later check will never trigger. During search, add to tmp
+            then at end do check with previously added data. Now it can trigger.
+        fork off gpio and lane detection
+        Use OTSU with filter
+        read only most recent value
+        check execs using pipes to watch how many processes succeeded vs failed
+        Get manual control over camera to prevent from autofocusing on random stuff (Control brightness, iso, aperture, etc?)
+        testing
+
+PID:
+    DONE:
+    TODO:
+        Make object that can be instantiated in processes that want a PID controller.
+        Slow vehicle if turning
+
+Object Detection:
+    DONE:
+    TODO:
+        YOLO? ImageAI?
+        Can we use pretrained datasets considering this is small-scale and we have different obstacles?
+
+GPIO:
+    DONE:
+    TODO:
+        hardware pwm
+        Run motor off arduino
+
+i2c:
+    DONE:
+    TODO:
+        Fix read buff where reading 10+numBytes...should try reading just numBytes. (see laneDetectionController)
+        Why does it keep reading after laneDetection is ctrl-c'ed? Please fix that.
+
+laneDetectionController:
+    DONE:
+    TODO:
+        Fix read buff where reading 10+numBytes...should try reading just numBytes. (see i2c)
+        Need to init steering to straight
+        Add drip instead of integrator
+
+
+Misc:
+    DONE:
+    IN PROGRESS:
+        Save video locally (need new video drivers?)
+    TODO:
+        Set up kill signals to gracefully end children
+            Can try using polling stdin for q
+        Is something messing with WiFi preventing ssh in, or cutting it?
+        Dead man switch should kill if ssh signal is lost (see DeBruhl Slack)

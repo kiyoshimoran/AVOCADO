@@ -1,0 +1,5 @@
+#define LD_TO_PP "/tmp/ld_to_pp"
+#define PP_TO_LD "/tmp/pp_to_ld"
+#define YOLO_TO_PP "/tmp/yolo_to_pp"
+#define PP_TO_MOTOR "/tmp/pp_to_motor"
+#define PP_TO_LD_CONTROLLER "/tmp/pp_offset"

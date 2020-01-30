@@ -1,0 +1,7 @@
+#define PLATOONING_VEL_PIPE "/tmp/platooning_vel_pipe"
+#define PLATOONING_DIST_PIPE "/tmp/platooning_dist_pipe"
+#define PLATOONING_PID_TO_MOTOR "/tmp/platooning_pid_to_motor"
+#define PLATOONING_TO_MOTOR "/tmp/platooning_to_motor"
+#define PLATOONING_STATE_TO_PID "/tmp/platooning_state_to_pid"
+#define FREQ_TO_CONTROLLER "/tmp/freq_to_controller"
+#define OTHER_FREQ_TO_PID "/tmp/other_freq_to_pid"
